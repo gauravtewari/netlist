@@ -1,0 +1,162 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{eg}{Example}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}{Property}[section]
+
+\usepackage{fontspec}
+\usepackage{array, booktabs}
+
+%----------------------------------------VARIABLES ------------------------------------------------
+\def \papertitle {Barchart for b15\_C}
+\def \paperauthor {Gaurav Tewari}
+\def \organization {University of Minnesota, Twin Cities}
+\def \emailaddr {tewar009@umn.edu}
+\def \webaddr {http://www.binarypirates.in}
+
+%-----------------------------------------DOCUMENT LAYOUT------------------------------------------
+
+%DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=6.5in, textheight=9.5in, marginparsep=7pt, marginparwidth=.6in}
+
+% ---------------------------------------------FONTS & COLORS-------------------------------------
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{mygreen}{rgb}{0.18,.54,0.34}
+\definecolor {mygrey}{gray}{0.2}
+\definecolor {myred} {rgb}{0.75,0,0}
+\definecolor{myblue}{rgb}{0,0.2,0.6}
+\definecolor{Brown}{cmyk}{0,0.81,1,0.60}
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{lightlightgray}{gray}{0.9}
+\definecolor{lightgray}{gray}{0.92}
+\definecolor{newcolor}{rgb}{0.5,0.5,1.0}
+
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+% Use Numbers={Proportional} for Normal Size Numbers below or {OldStyle} for other style
+%\setromanfont [Ligatures={Common}, Numbers={Proportional}, Variant=01]{Linux Libertine O}
+\setromanfont [Ligatures={Common}, BoldFont={Gentium Basic Bold}, ItalicFont={Gentium Basic Italic}]{Gentium Basic}
+
+\setmonofont[Scale=0.8]{Monaco}
+\usepackage{graphicx}
+
+%-----------------------------------------DEFINE NEW VERBATIM ENVIRONMENTS---------------------------
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment%
+{code}{Verbatim}
+{numbers=left,frame=leftline, formatcom=\color{RoyalBlue}, fontsize=\small}
+
+\DefineVerbatimEnvironment%
+{syntax}{Verbatim}
+{fontsize=\small, frame=leftline, formatcom=\color{myblue}}
+
+
+
+%-----------------------------------LISTING PACKAGE---------------------------
+\usepackage{listings}
+\usepackage{textcomp}
+
+\renewcommand{\lstlistingname}{Code} % The name used in the Caption followed by the running number
+\lstset{
+ language=C,
+ basicstyle=\small\ttfamily,
+ numbers=left,
+ numberstyle=\tiny\color{mygrey},
+ breaklines=true,
+ extendedchars=true,
+ stepnumber=1,
+ showspaces=false,
+ showtabs=false,
+ showstringspaces=false,
+ captionpos=b,
+ xleftmargin=17pt,
+ keywordstyle=\color{blue},
+ stringstyle=\color{OliveGreen}\ttfamily,
+ rulecolor=\color{Gray},
+ tabsize=2,
+ backgroundcolor=\color{lightlightgray},
+ frame=shadowbox,
+ emph={char,int},
+ emphstyle=\color{red},
+ lineskip=1pt,
+ aboveskip=10pt,
+ belowskip=10pt,
+ commentstyle=\color{CadetBlue}
+}
+
+\lstnewenvironment{lstsyntax}{
+\lstset{
+ language=C,
+ basicstyle=\color{myblue}\small\ttfamily,
+ breaklines=true,
+ numbers=none,
+ extendedchars=true,
+ showspaces=false,
+ showtabs=false,
+ %xleftmargin=17pt,
+ framexleftmargin=13pt,
+ backgroundcolor=\color{lightgray},
+ frame=shadowbox,
+}}{}
+
+%----------------------------------CHANGING BULLETS FOR ITEMIZE ENVIRONMENT---------------------------
+\renewcommand{\labelitemi}{$\rightarrow$}
+\renewcommand{\labelitemii}{$\Diamond$}
+
+% PDF SETUP
+\usepackage{hyperref}
+\hypersetup{
+  bookmarks = true,
+  colorlinks = true,
+  urlcolor = MidnightBlue,
+  linkcolor = blue,
+  pdfauthor = {\paperauthor},
+  pdfkeywords = {parallel programming, cuda, nvidia},
+  pdftitle = {\papertitle},
+  pdfsubject = {Notes},
+  pdfpagemode = UseNone
+}
+\XeTeXtracingfonts=1
+
+%----------------------------------MAKING FLOATS APPEAR WHERE THEY ARE------------------------------------------
+\renewcommand{\floatpagefraction}{.9}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.9}
+\renewcommand{\textfraction}{.1}
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large\color{myblue}}
+\subsectionfont{\mdseries\scshape\large\color{myblue}} 
+\subsubsectionfont{\mdseries\upshape\normalsize} 
+
+%\pagenumbering{arabic}
+
+
+%=========================================DOCUMENT BEGINS=====================%
+\begin{document}
+
+\title {\papertitle}
+\author{\paperauthor \quad(4453382)}
+\date{}
+\maketitle
+
+\begin{figure}[htbp]
+\caption{Bar Chart of b15\_C}
+\centering
+\includegraphics[width=1\textwidth]{barchart.png}
+\end{figure}
+
+\end{document}
